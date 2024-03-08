@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+             <!-- Các thẻ khác -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    </head>
+    <style>
+        
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+    }
+
+    h1, h4 {
+        color: #333;
+    }
+
+    .card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .card-text {
+        color: #777;
+    }
+
+    .poly-cart {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .panel-heading {
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .list-group-item {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .list-group-item:hover {
+        background-color: #a45e5e;
+    }
+
+    .card-footer {
+        background-color: #f8f8f8;
+        border-top: 1px solid #ddd;
+        padding: 20px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <header class="row">
+            <div class="shopping-mall">
+                <h1>Online Shopping Mall</h1>
+                <h4>The center point of the professional programming</h4>
+            </div>
+            <img src="images/header-object.png" alt class="pull-right">
+        </header>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="navId" style="margin-top: 20px ">
+            <li class="nav-item">
+                <a href="#tab1Id" class="nav-link active fas fa-home">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#tab1Id" class="nav-link active fas fa-info-circle">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+                <a href="#tab1Id" class="nav-link active fas fa-envelope">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+                <a href="#tab1Id" class="nav-link active fas fa-comment">Góp ý</a>
+            </li>
+            <li class="nav-item">
+                <a href="#tab1Id" class="nav-link active fas fa-question-circle">Hỏi đáp</a>
+            </li>
+<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fas fa-user" data-toggle="dropdown"
+                    href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">Tài khoản</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#tab2Id">Đăng nhập</a>
+                    <a class="dropdown-item" href="#tab3Id">Quên mật khẩu</a>
+                    <a class="dropdown-item" href="#tab3Id">Đăng kí thành
+                        viên</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#tab4Id">Đăng xuất</a>
+                    <a class="dropdown-item" href="#tab4Id">Đổi mật khẩu</a>
+                    <a class="dropdown-item" href="#tab4Id">Cập nhật hồ sơ</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#tab4Id">Đơn mua</a>
+                    <a class="dropdown-item" href="#tab4Id">Hàng đã mua</a>
+                </div>
+            </li>
+        </ul>
+        <div class="row" style="margin-top: 30px ">
+            <article class="col-sm-9">
+                <div class="card-columns">
+                   
+                    <div class="card">
+                        <img class="card-img-top" src="images/shoppingcart.gif"
+                            alt>
+                        <div class="card-body">
+                            <h4 class="card-title">SP1</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="images/shoppingcart.gif"
+                            alt>
+                        <div class="card-body">
+                            <h4 class="card-title">SP1</h4>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="images/shoppingcart.gif"
+                            alt>
+                        <div class="card-body">
+                            <h4 class="card-title">SP1</h4>
+<p class="card-text">Text</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+            <aside class="col-sm-3">
+                <div class="poly-cart" style="margin-top: 5px;">
+                    <div class="panel panel-default">
+
+                        <div class="panel-body">
+                            <img src="images/shoppingcart.gif" class="col-sm-5"
+                                alt>
+                            <ul class="col-sm-7"
+                                style="list-style: none; font-variant: small-caps; padding: 0px; margin: 0px;">
+                                <li>100 items</li>
+                                <li>$ 500</li>
+                                <li><a href>Views cart</a></li>
+                            </ul>
+                            <form action method="post">
+                                <input type="text" placeholder="Keywords"
+                                    class="form-control">
+                            </form>
+                        </div>
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-th-list"></span>
+                            <strong
+                                style="font-variant: small-caps; font-size: larger; text-shadow: 0 0 2px darkgray;">CHỦNG
+                                LOẠI</strong>
+                        </div>
+                        <div class="list-group">
+                            <a href class="list-group-item">iPhone</a>
+                            <a href class="list-group-item">iPad</a>
+                            <a href class="list-group-item">AirPod</a>
+                            <a href class="list-group-item">iPod</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer text-center">
+                Bản quyền thuộc về công ty
+            </div>
+        </div>
+        <!-- end card-->
+
+        <!-- OptionalJavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+</html>
