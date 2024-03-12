@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h4>Su dung Tab</h4>
+    <nav class="nav nav-tabs">
+      <a data-toggle="tab" class="nav-link active" href="#edit">Tab1</a>
+      <a data-toggle="tab" class="nav-link" href="#list">Danh sach</a>
+    </nav>
+    <!-- Content -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="edit">
+        <h1 >Bảng lương tháng 12</h1>
+        <br />
+        <table class="table table-hover">
+          <thead class="thead-light" style="background-color: blanchedalmond">
+            <tr>
+              <td><h4>Mã nhân viên</h4></td>
+              <td><h4>Họ tên</h4></td>
+              <td><h4>Lương</h4></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PH01</td>
+              <td>Nguyen Van A</td>
+              <td>12345</td>
+            </tr>
+            <tr>
+              <td>PH01</td>
+              <td>Nguyen Van A</td>
+              <td>12345</td>
+            </tr>
+            <tr>
+              <td>PH01</td>
+              <td>Nguyen Van A</td>
+              <td>12345</td>
+            </tr>
+            <tr>
+              <td>PH01</td>
+              <td>Nguyen Van A</td>
+              <td>12345</td>
+            </tr>
+            <tr>
+              <td>PH01</td>
+              <td>Nguyen Van A</td>
+              <td>12345</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane" id="list">
+        <h4>
+          <div class="container">
+            <h4>Nhập lương tháng 12</h4>
+            <br />
+
+            <form>
+              <div class="row" style="text-align: left">
+                <div class="form-group col-sm-4">
+                  <div class="form-group">
+                    <label for=""><h4>Mã nhân viên</h4></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="Thưởng"
+                      id="Thưởng"
+                      aria-describedby="helpId"
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+                <div class="form-group col-sm-4">
+                  <div class="form-group">
+                    <label for=""><h4>Họ và tên</h4></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="PC"
+                      id="PC"
+                      aria-describedby="helpId"
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="text-align: left">
+                <div class="form-group col-sm-4">
+                  <div class="form-group">
+                    <label for=""><h4>Câu lạc bộ</h4></label>
+                    <select class="form-control" name="" id="">
+                      <option>Ha Noi</option>
+                      <option>HCM</option>
+                      <option>Da Nang</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group col-sm-4">
+                  <div class="form-group">
+                    <label for=""><h4>Lương</h4></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="PhuCap"
+                      id="PhuCap"
+                      aria-describedby="helpId"
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="text-align: left">
+                <div class="form-group col-sm-4">
+                  <div class="form-group">
+                    <label for=""><h4>Thưởng</h4></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="Thưởng"
+                      id="Thưởng"
+                      aria-describedby="helpId"
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+                <div class="form-group col-sm4">
+                  <div class="form-group">
+                    <label for=""><h4>Phụ cấp</h4></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="PC"
+                      id="PC"
+                      aria-describedby="helpId"
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="form-group">
+                  <label for=""><h4>Ghi chú</h4></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="PC"
+                    id="PC"
+                    aria-describedby="helpId"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Lưu
+              </button>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-times"></i> Hủy
+              </button>
+            </form>
+          </div>
+        </h4>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
