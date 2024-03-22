@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rectangle Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <style>
+      /* CSS code here */
+      .form-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        justify-items: start;
+
+        height: 100vh;
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 5px;
+      }
+
+      .btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      // AngularJS code here
+      var app = angular.module("myapp", []);
+      app.controller("myctrl", function ($scope) {
+        $scope.calculate = function () {
+         var a=parseFloat($scope.width);
+         var b=parseFloat($scope.length);
+         $scope.acreage=a*b;
+          $scope.perimeter=(a+b)*2;
+        };
+      });
+    </script>
+  </head>
+  <body ng-app="myapp">
+    <div class="form-container">
+      <div ng-controller="myctrl">
+        <form>
+          <div class="form-group">
+            <label for="length">Chiều dài</label>
+            <input ng-model="length" id="length" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="width">Chiều rộng</label>
+            <input ng-model="width" id="width" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="acreage">Diện tích hình chữ nhật</label>
+            <input
+              ng-model="acreage"
+              id="acreage"
+              class="form-control"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <label for="perimeter">Chu vi hình chữ nhật</label>
+            <input
+              ng-model="perimeter"
+              id="perimeter"
+              class="form-control"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" ng-click="calculate()">
+              Calculate
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
