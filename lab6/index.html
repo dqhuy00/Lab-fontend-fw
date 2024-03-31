@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tính tiền thưởng tết</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body>
+    <div class="container" ng-app="myapp" ng-controller="myctrl">
+      <div class="card-columns">
+        <div class="card">
+          <img class="card-img-top" src="holder.js/100x180/" alt="" />
+          <div class="card-body">
+            <h4 class="card-title">Tính tiền thưởng tết</h4>
+            <form action="" method="get">
+              <div class="form-group">
+                <label for="">Họ tên</label>
+                <input
+                  type="text"
+                  ng-model="fullname"
+                  class="form-control"
+                  name=""
+                  id=""
+                  aria-describedby="helpId"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="">Lương</label>
+                <input
+                  type="text"
+                  ng-model="salary"
+                  class="form-control"
+                  name=""
+                  id=""
+                  aria-describedby="helpId"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-check">
+                <label class="form-check-label"
+                  >Giới tính<br />
+                  <input
+                    type="radio"
+                    ng-model="gender"
+                    class="form-check-input"
+                    name="op1"
+                    id=""
+                    value="Nam"
+                    checked
+                  />
+                  Nam<br />
+                  <input
+                    type="radio"
+                    ng-model="gender"
+                    class="form-check-input"
+                    name="op1"
+                    id=""
+                    value="Nu"
+                  />
+                  Nữ
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="">Độ tuổi</label>
+                <select
+                  ng-model="age"
+                  ng-options="a.age for a in dotuoi"
+                  class="custom-select"
+                  name=""
+                  id=""
+                ></select>
+              </div>
+            </form>
+            <div class="panel-footer">
+              Tiền thưởng: <strong>{{getBonus() | number: 2}}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var app = angular.module("myapp", []);
+      app.controller("myctrl", function ($scope) {
+        $scope.getBonus = function () {
+          var bonus = $scope.age.rate * $scope.salary;
+          if ($scope.gender == "Nu") {
+            bonus += 200000;
+          }
+          return bonus;
+        };
+        $scope.dotuoi = [
+          {
+            age: "Dưới 25",
+            rate: 0.07,
+          },
+          {
+            age: "Từ 25 đến 40",
+            rate: 0.1,
+          },
+          {
+            age: "Trên 40",
+            rate: 0.15,
+          },
+        ];
+        $scope.age = $scope.dotuoi[2];
+        $scope.gender = "Nam";
+      });
+    </script>
+  </body>
+</html>

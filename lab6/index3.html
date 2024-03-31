@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kiểm tra số chia hết cho 2 và 9</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      /* CSS tùy chỉnh của bạn */
+      .container {
+        margin-top: 50px;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-weight: bold;
+        color: blue;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kiểm tra số chia hết cho 2 và 9</h1>
+      <form>
+        <div class="form-group">
+          <label for="numberInput">Nhập số nguyên:</label>
+          <input type="number" class="form-control" id="numberInput" min="0" />
+        </div>
+        <button type="button" class="btn btn-primary" onclick="checkNumber()">
+          Kiểm tra
+        </button>
+      </form>
+      <div id="result" style="display: none"></div>
+    </div>
+
+    <script>
+      function checkNumber() {
+        var numberInput = document.getElementById("numberInput");
+        var number = parseInt(numberInput.value);
+
+        var isDivisibleBy2 = number % 2 === 0;
+        var isDivisibleBy9 = number % 9 === 0;
+
+        var resultDiv = document.getElementById("result");
+        resultDiv.style.display = "block";
+
+        if (isDivisibleBy2 && isDivisibleBy9) {
+          resultDiv.innerHTML = "Số " + number + " chia hết cho 2 và 9.";
+        } else {
+          resultDiv.innerHTML =
+            "Số " + number + " không chia hết cho cả 2 và 9.";
+        }
+      }
+    </script>
+  </body>
+</html>
