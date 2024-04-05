@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+      /* Add your custom styles here */
+      .discount {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div ng-app="productApp" ng-controller="ProductController as vm" class="container">
+      <h2>Danh sach hang hoa</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="product in vm.products">
+            <td scope="row">{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td ng-class="{'discount': product.discount > 0}">{{product.discount | percentage: 2}}</td>
+            <td>{{product.date}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      var app = angular.module("productApp", []);
+      app.controller("ProductController", function() {
+        var vm = this;
+        vm.products = [
+          { name: 'San pham 1', price: 100, discount: 10, date: '2024-03-22' },
+          { name: 'San pham 2', price: 150, discount: 9, date: '2024-03-23' },
+          { name: 'San pham 3', price: 200, discount: 7, date: '2024-03-22' },
+          { name: 'San pham 4', price: 98, discount: 12, date: '2024-04-01' },
+          { name: 'San pham 5', price: 201, discount: 8, date: '2024-03-22' },
+        ];
+      })
+      .filter('percentage', ['$filter', function($filter) {
+        return function(input, decimals) {
+          return $filter('number')(input, decimals) + '%';
+        };
+      }]);
+    </script>
+  </body>
+</html>
