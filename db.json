@@ -1,0 +1,955 @@
+{
+  "binhluan": [
+    {
+      "id": "1",
+      "noi_dung": "đẹp",
+      "username": 1,
+      "ma_sp": 1,
+      "ngay_bl": "11/25/2023",
+      "rate": 5
+    },
+    {
+      "id": "1",
+      "noi_dung": "đẹp",
+      "username": "huy",
+      "ma_sp": 8,
+      "ngay_bl": "11/25/2023",
+      "rate": 4
+    },
+    {
+      "id": "c95d",
+      "noi_dung": "kjkjas",
+      "username": "huy",
+      "ma_sp": 8,
+      "ngay_bl": "04/06/2024",
+      "rate": 4
+    },
+    {
+      "id": "5653",
+      "noi_dung": "như cứt",
+      "username": "huy",
+      "ma_sp": "8",
+      "ngay_bl": "04/06/2024",
+      "rate": 0
+    },
+    {
+      "id": "cb08",
+      "noi_dung": "ok",
+      "username": "huy",
+      "ma_sp": "8",
+      "ngay_bl": "04/06/2024",
+      "rate": 3
+    }
+  ],
+  "chitietdonhang": [
+    {
+      "id": "1",
+      "ma_sp": 1,
+      "ma_dh": 1,
+      "gia": 600000,
+      "so_luong": 1,
+      "anh": "sanpham1.jpg",
+      "ten": "GỌNG KÍNH CẬN BLANCY 804 C1 "
+    },
+    {
+      "id": "2",
+      "ma_sp": 2,
+      "ma_dh": 1,
+      "gia": 450000,
+      "so_luong": 1,
+      "anh": "sanpham2.jpg",
+      "ten": "GỌNG KÍNH CẬN EYEPLUS 011777 C2 "
+    },
+    {
+      "id": "3",
+      "ma_sp": 3,
+      "ma_dh": 2,
+      "gia": 500000,
+      "so_luong": 1,
+      "anh": "sanpham3.jpg",
+      "ten": "GỌNG KÍNH CẬN EYE PLUS 91330 C1 "
+    },
+    {
+      "id": "4",
+      "ma_sp": 4,
+      "ma_dh": 2,
+      "gia": 400000,
+      "so_luong": 1,
+      "anh": "sanpham9.jpg",
+      "ten": "GỌNG KÍNH CẬN EYE PLUS 95550 C4 "
+    },
+    {
+      "id": "5",
+      "ma_sp": 1,
+      "ma_dh": 97,
+      "gia": 600000,
+      "so_luong": 2,
+      "anh": "sanpham1.jpg",
+      "ten": "GỌNG KÍNH CẬN BLANCY 804 C1 "
+    },
+    {
+      "id": "6",
+      "ma_sp": 15,
+      "ma_dh": 97,
+      "gia": 900000,
+      "so_luong": 1,
+      "anh": "sanpham17.jpg",
+      "ten": "Exfash EF58773-C05"
+    },
+    {
+      "id": "7",
+      "ma_sp": 5,
+      "ma_dh": 97,
+      "gia": 800000,
+      "so_luong": 4,
+      "anh": "sanpham18.jpg",
+      "ten": "Exfash EF79952_58-C11"
+    },
+    {
+      "id": "8",
+      "ma_sp": 15,
+      "ma_dh": 98,
+      "gia": 900000,
+      "so_luong": 1,
+      "anh": "sanpham17.jpg",
+      "ten": "Exfash EF58773-C05"
+    },
+    {
+      "id": "9",
+      "ma_sp": 12,
+      "ma_dh": 98,
+      "gia": 400000,
+      "so_luong": 1,
+      "anh": "sanpham12.jpg",
+      "ten": "KÍNH RÂM 20279 C1 "
+    },
+    {
+      "id": "10",
+      "ma_sp": 28,
+      "ma_dh": 98,
+      "gia": 350000,
+      "so_luong": 1,
+      "anh": "sanpham11.jpg",
+      "ten": "KÍNH RÂM  20279 C1 "
+    },
+    {
+      "id": "11",
+      "ma_sp": 15,
+      "ma_dh": 99,
+      "gia": 900000,
+      "so_luong": 1,
+      "anh": "sanpham17.jpg",
+      "ten": "Exfash EF58773-C05"
+    },
+    {
+      "id": "12",
+      "ma_sp": 12,
+      "ma_dh": 99,
+      "gia": 400000,
+      "so_luong": 1,
+      "anh": "sanpham12.jpg",
+      "ten": "KÍNH RÂM 20279 C1 "
+    },
+    {
+      "id": "13",
+      "ma_sp": 28,
+      "ma_dh": 99,
+      "gia": 350000,
+      "so_luong": 1,
+      "anh": "sanpham11.jpg",
+      "ten": "KÍNH RÂM  20279 C1 "
+    },
+    {
+      "id": "14",
+      "ma_sp": 12,
+      "ma_dh": 100,
+      "gia": 400000,
+      "so_luong": 1,
+      "anh": "sanpham12.jpg",
+      "ten": "KÍNH RÂM 20279 C1 "
+    },
+    {
+      "id": "15",
+      "ma_sp": 1,
+      "ma_dh": 101,
+      "gia": 600000,
+      "so_luong": 2,
+      "anh": "sanpham1.jpg",
+      "ten": "GỌNG KÍNH CẬN BLANCY 804 C1 "
+    },
+    {
+      "id": "16",
+      "ma_sp": 15,
+      "ma_dh": 101,
+      "gia": 900000,
+      "so_luong": 1,
+      "anh": "sanpham17.jpg",
+      "ten": "Exfash EF58773-C05"
+    },
+    {
+      "id": "17",
+      "ma_sp": 5,
+      "ma_dh": 101,
+      "gia": 800000,
+      "so_luong": 4,
+      "anh": "sanpham18.jpg",
+      "ten": "Exfash EF79952_58-C11"
+    },
+    {
+      "id": "18",
+      "ma_sp": 28,
+      "ma_dh": 102,
+      "gia": 350000,
+      "so_luong": 1,
+      "anh": "sanpham11.jpg",
+      "ten": "KÍNH RÂM  20279 C1 "
+    },
+    {
+      "id": "19",
+      "ma_sp": 15,
+      "ma_dh": 102,
+      "gia": 900000,
+      "so_luong": 1,
+      "anh": "sanpham17.jpg",
+      "ten": "Exfash EF58773-C05"
+    },
+    {
+      "id": "20",
+      "ma_sp": 13,
+      "ma_dh": 102,
+      "gia": 350000,
+      "so_luong": 1,
+      "anh": "sanpham15.jpg",
+      "ten": "KÍNH RÂM EYEPLUS 28007 C6"
+    },
+    {
+      "id": "21",
+      "ma_sp": 15,
+      "ma_dh": 103,
+      "gia": 900000,
+      "so_luong": 1,
+      "anh": "sanpham17.jpg",
+      "ten": "Exfash EF58773-C05"
+    },
+    {
+      "id": "22",
+      "ma_sp": 15,
+      "ma_dh": 104,
+      "gia": 900000,
+      "so_luong": 1,
+      "anh": "sanpham17.jpg",
+      "ten": "Exfash EF58773-C05"
+    },
+    {
+      "id": "23",
+      "ma_sp": 4,
+      "ma_dh": 104,
+      "gia": 350000,
+      "so_luong": 1,
+      "anh": "sanpham9.jpg",
+      "ten": "GỌNG KÍNH CẬN EYE PLUS 95550 C4 "
+    },
+    {
+      "id": "24",
+      "ma_sp": 15,
+      "ma_dh": 105,
+      "gia": 900000,
+      "so_luong": 6,
+      "anh": "sanpham17.jpg",
+      "ten": "Exfash EF58773-C05"
+    },
+    {
+      "id": "25",
+      "ma_sp": 168,
+      "ma_dh": 105,
+      "gia": 600000,
+      "so_luong": 1,
+      "anh": "sanpham24.jpg",
+      "ten": "GỌNG KÍNH REEMAN ACETATE 123AK"
+    },
+    {
+      "id": "26",
+      "ma_sp": 19,
+      "ma_dh": 105,
+      "gia": 900000,
+      "so_luong": 1,
+      "anh": "sanpham16.jpg",
+      "ten": "Exfash EF58750-C07"
+    },
+    {
+      "id": "27",
+      "ma_sp": 186,
+      "ma_dh": 106,
+      "gia": 400000,
+      "so_luong": 8,
+      "anh": "sanpham27.jpg",
+      "ten": "KÍNH RÂM EYE PLUS 404 C1"
+    },
+    {
+      "id": "28",
+      "ma_sp": 191,
+      "ma_dh": 107,
+      "gia": 400000,
+      "so_luong": 2,
+      "anh": "sanpham27.jpg",
+      "ten": "KÍNH RÂM EYE PLUS 404 C1"
+    },
+    {
+      "id": "29",
+      "ma_sp": 183,
+      "ma_dh": 108,
+      "gia": 400000,
+      "so_luong": 2,
+      "anh": "sanpham26.jpg",
+      "ten": "KÍNH RÂM NAM NỮ EYEPLUS J896 C1"
+    },
+    {
+      "id": "30",
+      "ma_sp": 174,
+      "ma_dh": 108,
+      "gia": 1104000,
+      "so_luong": 9,
+      "anh": "sanpham25.jpg",
+      "ten": "KÍNH RÂM REEMAN 896 C2"
+    },
+    {
+      "id": "31",
+      "ma_sp": 138,
+      "ma_dh": 108,
+      "gia": 176000,
+      "so_luong": 1,
+      "anh": "sanpham19.jpg",
+      "ten": "GỌNG KÍNH EYE PLUS 190053 C6"
+    },
+    {
+      "id": "32",
+      "ma_sp": 77,
+      "ma_dh": 109,
+      "gia": 700000,
+      "so_luong": 6,
+      "anh": "sanpham10.jpg",
+      "ten": "KÍNH RÂM  553 C1 GỌNG "
+    },
+    {
+      "id": "33",
+      "ma_sp": 15,
+      "ma_dh": 109,
+      "gia": 900000,
+      "so_luong": 10,
+      "anh": "sanpham17.jpg",
+      "ten": "Exfash EF58773-C05"
+    },
+    {
+      "id": "34",
+      "ma_sp": 5,
+      "ma_dh": 109,
+      "gia": 800000,
+      "so_luong": 9,
+      "anh": "sanpham18.jpg",
+      "ten": "Exfash EF79952_58-C11"
+    },
+    {
+      "id": "35",
+      "ma_sp": 174,
+      "ma_dh": 109,
+      "gia": 1104000,
+      "so_luong": 1,
+      "anh": "sanpham25.jpg",
+      "ten": "KÍNH RÂM REEMAN 896 C2"
+    },
+    {
+      "id": "36",
+      "ma_sp": 186,
+      "ma_dh": 109,
+      "gia": 400000,
+      "so_luong": 3,
+      "anh": "sanpham27.jpg",
+      "ten": "KÍNH RÂM EYE PLUS 404 C1"
+    }
+  ],
+  "danhmuc": [
+    {
+      "id": "1",
+      "ten_dm": "Gọng kính"
+    },
+    {
+      "id": "2",
+      "ten_dm": "Kính râm"
+    },
+    {
+      "id": "3",
+      "ten_dm": "Kính thời trang"
+    }
+  ],
+  "donhang": [
+    {
+      "id": "1",
+      "ma_user": 1,
+      "phone": "0377699408",
+      "dia_tri": "dong anh",
+      "ngay_dat_hang": "11/01/2023",
+      "ma_tt": 1,
+      "tong": 30000,
+      "hovaten": "huy",
+      "ma_ttdh": "2"
+    },
+    {
+      "id": "2",
+      "ma_user": 2,
+      "phone": "098765432",
+      "dia_tri": "khánh hòa",
+      "ngay_dat_hang": "11/14/2023",
+      "ma_tt": 2,
+      "tong": 3235250,
+      "hovaten": "huy",
+      "ma_ttdh": "4"
+    },
+    {
+      "id": "97",
+      "ma_user": 1,
+      "phone": "0377699408",
+      "dia_tri": "dong anh",
+      "ngay_dat_hang": "05/07/2023",
+      "ma_tt": 2,
+      "tong": 5300000,
+      "hovaten": "huy",
+      "ma_ttdh": "5"
+    },
+    {
+      "id": "98",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đường di ái",
+      "ngay_dat_hang": "10/07/2023",
+      "ma_tt": 2,
+      "tong": 1650000,
+      "hovaten": "Nguyễn Tài Việt",
+      "ma_ttdh": "1"
+    },
+    {
+      "id": "99",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đường di ái",
+      "ngay_dat_hang": "12/07/2023",
+      "ma_tt": 2,
+      "tong": 1650000,
+      "hovaten": "Nguyễn Tài Việt",
+      "ma_ttdh": "1"
+    },
+    {
+      "id": "100",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đường di ái",
+      "ngay_dat_hang": "12/08/2023",
+      "ma_tt": 2,
+      "tong": 400000,
+      "hovaten": "Nguyễn",
+      "ma_ttdh": "1"
+    },
+    {
+      "id": "101",
+      "ma_user": 1,
+      "phone": "0377699408",
+      "dia_tri": "dong anh",
+      "ngay_dat_hang": "01/07/2023",
+      "ma_tt": 2,
+      "tong": 5300000,
+      "hovaten": "huy",
+      "ma_ttdh": "4"
+    },
+    {
+      "id": "102",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đường di ái",
+      "ngay_dat_hang": "06/07/2023",
+      "ma_tt": 1,
+      "tong": 1600000,
+      "hovaten": "kiên",
+      "ma_ttdh": "1"
+    },
+    {
+      "id": "103",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đường di ái",
+      "ngay_dat_hang": "12/13/2023",
+      "ma_tt": 1,
+      "tong": 900000,
+      "hovaten": "Nguyễn Tài Việt",
+      "ma_ttdh": "1"
+    },
+    {
+      "id": "104",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đường di ái",
+      "ngay_dat_hang": "12/10/2023",
+      "ma_tt": 1,
+      "tong": 1250000,
+      "hovaten": "thu",
+      "ma_ttdh": "1"
+    },
+    {
+      "id": "105",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đonmng anh",
+      "ngay_dat_hang": "12/12/2023",
+      "ma_tt": 1,
+      "tong": 6900000,
+      "hovaten": "huy gay",
+      "ma_ttdh": "1"
+    },
+    {
+      "id": "106",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đường di ái",
+      "ngay_dat_hang": "12/13/2023",
+      "ma_tt": 1,
+      "tong": 3200000,
+      "hovaten": "Nguyễn Tài Việt",
+      "ma_ttdh": "1"
+    },
+    {
+      "id": "107",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đường di ái",
+      "ngay_dat_hang": "12/13/2023",
+      "ma_tt": 1,
+      "tong": 800000,
+      "hovaten": "Nguyễn Tài Việt",
+      "ma_ttdh": "1"
+    },
+    {
+      "id": "108",
+      "ma_user": 0,
+      "phone": "0813754231",
+      "dia_tri": "đường di ái",
+      "ngay_dat_hang": "12/14/2023",
+      "ma_tt": 1,
+      "tong": 10912000,
+      "hovaten": "Nguyễn Tài Việt",
+      "ma_ttdh": "4"
+    },
+    {
+      "id": "109",
+      "ma_user": 1,
+      "phone": "0377699408",
+      "dia_tri": "dong anh",
+      "ngay_dat_hang": "12/14/2023",
+      "ma_tt": 1,
+      "tong": 22704000,
+      "hovaten": "huy",
+      "ma_ttdh": "5"
+    }
+  ],
+  "giohang": [
+    {
+      "id": "5",
+      "gia": 400000,
+      "sl": 2,
+      "anh": "sanpham12.jpg",
+      "ma_sp": 12,
+      "ma_user": 2,
+      "tensp": "KÍNH RÂM 20279 C1 "
+    },
+    {
+      "id": "113",
+      "gia": 800000,
+      "sl": 1,
+      "anh": "sanpham18.jpg",
+      "ma_sp": 5,
+      "ma_user": 2,
+      "tensp": "Exfash EF79952_58-C11"
+    },
+    {
+      "id": "114",
+      "gia": 400000,
+      "sl": 1,
+      "anh": "sanpham27.jpg",
+      "ma_sp": 186,
+      "ma_user": 2,
+      "tensp": "KÍNH RÂM EYE PLUS 404 C1"
+    }
+  ],
+  "rate": [
+    {
+      "id": "0",
+      "mota": "cực kỳ tệ"
+    },
+    {
+      "id": "1",
+      "mota": "rất tệ"
+    },
+    {
+      "id": "2",
+      "mota": "tệ"
+    },
+    {
+      "id": "3",
+      "mota": "bình thường"
+    },
+    {
+      "id": "4",
+      "mota": "tốt"
+    },
+    {
+      "id": "5",
+      "mota": "tuyệt vời"
+    }
+  ],
+  "sanpham": [
+    {
+      "id": "1",
+      "ten_sp": "GỌNG KÍNH CẬN BLANCY 804 C1",
+      "ngay_nhap": "11/01/2022",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Chất liệu nhựa nguyên khối cao cấp cao cấp nay có thêm kiểu dáng chữ nhật cả viền cho các anh em thoải mái với mọi lựa chọn.",
+      "gia": 600000,
+      "anhsp": "sanpham1.jpg"
+    },
+    {
+      "id": "2",
+      "ten_sp": "GỌNG KÍNH CẬN EYEPLUS 011777 C2 ",
+      "ngay_nhap": "11/02/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Chất liệu kim loại cao cấp cao cấp nay có thêm kiểu dáng Club Master Đen viền bạc cho các anh em thoải mái với mọi lựa chọn.",
+      "gia": 400000,
+      "anhsp": "sanpham2.jpg"
+    },
+    {
+      "id": "3",
+      "ten_sp": "GỌNG KÍNH CẬN EYE PLUS 91330 C1 ",
+      "ngay_nhap": "10/04/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Gọng kính cận nhựa dẻo 91330 nằm trong bộ sưu tập gọng kính cận nam, nữ được yêu thích nhất.",
+      "gia": 600000,
+      "anhsp": "sanpham3.jpg"
+    },
+    {
+      "id": "4",
+      "ten_sp": "GỌNG KÍNH CẬN EYE PLUS 91330 C3 ",
+      "ngay_nhap": "11/09/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Gọng kính được làm từ chất liệu kim loại, mang đến những trải nghiệm mới mẻ và độc đáo ",
+      "gia": 450000,
+      "anhsp": "sanpham4.jpg"
+    },
+    {
+      "id": "5",
+      "ten_sp": "GỌNG KÍNH CẬN EYEPLUS 190009 C2 ",
+      "ngay_nhap": "10/05/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Gọng kính Eye Plus 190009 dáng cá tính có điểm nhấn nổi bật nằm ở thiết kế hai bên càng kính.",
+      "gia": 500000,
+      "anhsp": "sanpham5.jpg"
+    },
+    {
+      "id": "6",
+      "ten_sp": "GỌNG KÍNH CẬN 161557 C2 ",
+      "ngay_nhap": "09/02/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Gọng kính  161557 dáng cá tính có điểm nhấn nổi bật nằm ở thiết kế hai bên càng kính.",
+      "gia": 250000,
+      "anhsp": "sanpham6.jpg"
+    },
+    {
+      "id": "7",
+      "ten_sp": "GỌNG KÍNH CẬN  161557 C3 ",
+      "ngay_nhap": "09/09/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": " Form dáng cá tính, và độc đáo, thích hợp làm mới vẻ ngoài của người sử dụng.",
+      "gia": 500000,
+      "anhsp": "sanpham7.jpg"
+    },
+    {
+      "id": "8",
+      "ten_sp": "GỌNG KÍNH CẬN EYE PLUS 31550 C7 ",
+      "ngay_nhap": "11/01/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Các bộ phận khác như cầu kính, ve kính, càng kính, … được chau chuốt và gia công tỉ mỉ trên từng chi tiết ",
+      "gia": 600000,
+      "anhsp": "sanpham8.jpg"
+    },
+    {
+      "id": "9",
+      "ten_sp": "GỌNG KÍNH CẬN EYE PLUS 95550 C4 ",
+      "ngay_nhap": "09/09/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Sản phẩm mang đến một vẻ đẹp tinh tế, đồng thời tạo điểm nhấn ấn tượng trên khuôn mặt chủ sở hữu. ",
+      "gia": 350000,
+      "anhsp": "sanpham9.jpg"
+    },
+    {
+      "id": "10",
+      "ten_sp": "KÍNH RÂM  553 C1 GỌNG ",
+      "ngay_nhap": "11/01/2023",
+      "ma_dm": "2",
+      "sl": "15",
+      "mota": " EP 553 được thiết kế bởi chất liệu nhựa cao cấp bền bỉ với thời gian",
+      "gia": 700000,
+      "anhsp": "sanpham10.jpg"
+    },
+    {
+      "id": "11",
+      "ten_sp": "KÍNH RÂM  20279 C1 ",
+      "ngay_nhap": "09/09/2023",
+      "ma_dm": "2",
+      "sl": "15",
+      "mota": "Kính râm EP 20279 nổi bật với sự kết hợp khéo léo gọng đen mắt vàng cá tính, tất cả tạo nên một tổng thể hài hoà.",
+      "gia": 350000,
+      "anhsp": "sanpham11.jpg"
+    },
+    {
+      "id": "12",
+      "ten_sp": "KÍNH RÂM 20279 C1 ",
+      "ngay_nhap": "11/16/2023",
+      "ma_dm": "2",
+      "sl": "15",
+      "mota": "Kính râm EP 20279 nổi bật với sự kết hợp khéo léo gọng đen mắt đen cá tính.",
+      "gia": 400000,
+      "anhsp": "sanpham12.jpg"
+    },
+    {
+      "id": "13",
+      "ten_sp": "KÍNH RÂM 749 ",
+      "ngay_nhap": "09/09/2023",
+      "ma_dm": "2",
+      "sl": "15",
+      "mota": "EP 749 được thiết kế bởi chất liệu nhựa cao cấp bền bỉ với thời gian, mang đến những trải nghiệm độc đáo ",
+      "gia": 350000,
+      "anhsp": "sanpham13.jpg"
+    },
+    {
+      "id": "14",
+      "ten_sp": "KÍNH RÂM NAM NỮ J896 C4",
+      "ngay_nhap": "11/01/2023",
+      "ma_dm": "2",
+      "sl": "15",
+      "mota": "Kính râm EP 896 nổi bật với sự kết hợp khéo léo,cá tính.",
+      "gia": 400000,
+      "anhsp": "sanpham14.jpg"
+    },
+    {
+      "id": "15",
+      "ten_sp": "KÍNH RÂM EYEPLUS 28007 C6",
+      "ngay_nhap": "09/09/2023",
+      "ma_dm": "2",
+      "sl": "15",
+      "mota": "Kính râm EP 28007 nổi bật với sự kết hợp khéo léo gọng cam mắt cam hồng cá tính, tất cả tạo nên một tổng thể hài hoà",
+      "gia": 350000,
+      "anhsp": "sanpham15.jpg"
+    },
+    {
+      "id": "16",
+      "ten_sp": "Exfash EF58750-C07",
+      "ngay_nhap": "11/01/2023",
+      "ma_dm": "3",
+      "sl": "15",
+      "mota": "Kính thời trang nam chính hãng hiệu Exfash.rnModel EF58750-C03 , sx Korea",
+      "gia": 900000,
+      "anhsp": "sanpham16.jpg"
+    },
+    {
+      "id": "17",
+      "ten_sp": "Exfash EF58773-C05",
+      "ngay_nhap": "09/09/2023",
+      "ma_dm": "3",
+      "sl": "15",
+      "mota": "Kiểu dáng thể thao phù hợp nam giới.Khung và càng kính chất liệu nhựa cao cấp đen.",
+      "gia": 900000,
+      "anhsp": "sanpham17.jpg"
+    },
+    {
+      "id": "18",
+      "ten_sp": "Exfash EF79952_58-C11",
+      "ngay_nhap": "11/01/2023",
+      "ma_dm": "3",
+      "sl": "15",
+      "mota": "Tròng kính nhựa polycarbonate màu xám chống UV 100%.n",
+      "gia": 800000,
+      "anhsp": "sanpham18.jpg"
+    },
+    {
+      "id": "19",
+      "ten_sp": "GỌNG KÍNH EYE PLUS 190053 C6",
+      "ngay_nhap": "12/14/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Kính chống ánh sáng xanh 17997 với phần tròng kính ngăn chặn 100% ánh sáng xanh gây hại từ thiết bị điện tử. Với những khách hàng có độ cận là 0 có thể sử dụng trực tiếp luôn. Vô cùng tiện lợi và tiết kiệm.",
+      "gia": 176000,
+      "anhsp": "sanpham19.jpg"
+    },
+    {
+      "id": "20",
+      "ten_sp": "GỌNG KÍNH EYE PLUS 5072 C1",
+      "ngay_nhap": "12/22/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Gọng kính E450 5072 với thiết kế mắt vuông bo tròn lịch lãm cho nam, cá tính cho nữ. ",
+      "gia": 304000,
+      "anhsp": "sanpham20.jpg"
+    },
+    {
+      "id": "21",
+      "ten_sp": "GỌNG KÍNH EYE PLUS 2517 C2",
+      "ngay_nhap": "12/07/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Gọng kính E450 2517 với thiết kế mắt vuông bo tròn lịch lãm cho nam, cá tính cho nữ",
+      "gia": 360000,
+      "anhsp": "sanpham21.jpg"
+    },
+    {
+      "id": "22",
+      "ten_sp": "GỌNG KÍNH EYE PLUS 7107 C9",
+      "ngay_nhap": "12/07/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Gọng kính E450 2517 với thiết kế mắt vuông bo tròn lịch lãm cho nam, cá tính cho nữ",
+      "gia": 360000,
+      "anhsp": "sanpham22.jpg"
+    },
+    {
+      "id": "23",
+      "ten_sp": "GỌNG KÍNH EYE PLUS 17997 C6",
+      "ngay_nhap": "12/01/2023",
+      "ma_dm": "3",
+      "sl": "15",
+      "mota": "Sản phẩm được cách điệu bởi chi tiết hoa văn kim loại được đúc khắc độc đáo, và được bọc một cách khéo léo & tinh tế bởi một lớp nhựa cao cấp. Tạo điểm nhấn thu hút trên chiếc kính dáng Unisex.",
+      "gia": 176000,
+      "anhsp": "sanpham23.jpg"
+    },
+    {
+      "id": "24",
+      "ten_sp": "GỌNG KÍNH REEMAN ACETATE 123AK",
+      "ngay_nhap": "12/01/2023",
+      "ma_dm": "3",
+      "sl": "15",
+      "mota": "Gọng kính REEMAN ACETATE 123AK với thiết kế mắt vuông bo tròn lịch lãm cho nam",
+      "gia": 600000,
+      "anhsp": "sanpham24.jpg"
+    },
+    {
+      "id": "25",
+      "ten_sp": "KÍNH RÂM REEMAN 896 C2",
+      "ngay_nhap": "12/06/2023",
+      "ma_dm": "2",
+      "sl": "15",
+      "mota": "Kính râm thời trang RM 896 là mẫu sản phẩm được thiết kế độc quyền bởi Ree-man. RM896 được thiết kế bởi chất liệu Titan và Acetate cao cấp bền bỉ với thời gian, mang đến những trải nghiệm độc đáo như: giá trị sử dụng lâu dài, mặt kính bóng đẹp, khó bị gỉ,",
+      "gia": 1104000,
+      "anhsp": "sanpham25.jpg"
+    },
+    {
+      "id": "26",
+      "ten_sp": "KÍNH RÂM NAM NỮ EYEPLUS J896 C1",
+      "ngay_nhap": "12/01/2023",
+      "ma_dm": "2",
+      "sl": "15",
+      "mota": "Kính râm thời trang EYEPLUS 896 là mẫu sản phẩm được thiết kế độc quyền bởi Eye Plus. EP 896 được thiết kế bởi chất liệu nhựa cao cấp bền bỉ với thời gian, mang đến những trải nghiệm độc đáo như: giá trị sử dụng lâu dài, mặt kính bóng đẹp, khó bị gỉ, chốn",
+      "gia": 400000,
+      "anhsp": "sanpham26.jpg"
+    },
+    {
+      "id": "27",
+      "ten_sp": "KÍNH RÂM EYE PLUS 404 C1",
+      "ngay_nhap": "12/23/2023",
+      "ma_dm": "1",
+      "sl": "15",
+      "mota": "Kính râm thời trang EP H404 là mẫu sản phẩm được thiết kế độc quyền bởi Eye Plus. EP 404 được thiết kế bởi chất liệu nhựa cao cấp bền bỉ với thời gian, mang đến những trải nghiệm độc đáo như: giá trị sử dụng lâu dài, mặt kính bóng đẹp, khó bị gỉ, chống ch",
+      "gia": 400000,
+      "anhsp": "sanpham27.jpg"
+    }
+  ],
+  "thanhtoan": [
+    {
+      "id": "1",
+      "hinh_thuc": "off",
+      "mota": "tiền mặt"
+    },
+    {
+      "id": "2",
+      "hinh_thuc": "on",
+      "mota": "chuyển khoản"
+    }
+  ],
+  "trangthaidh": [
+    {
+      "id": "1",
+      "mota": "Chờ xác nhận"
+    },
+    {
+      "id": "2",
+      "mota": "Chờ giao hàng"
+    },
+    {
+      "id": "3",
+      "mota": "Đã giao"
+    },
+    {
+      "id": "4",
+      "mota": "Đã hủy"
+    },
+    {
+      "id": "5",
+      "mota": "Đã nhận"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "huy",
+      "password": "123",
+      "img": "user1_Screenshot 2023-12-10 214558.png",
+      "email": "huy@gmail.com",
+      "sdt": "0377699408",
+      "dia_tri": "dong anh",
+      "vai_tro": 1
+    },
+    {
+      "id": "2",
+      "username": "viet",
+      "password": "123",
+      "email": "viet@gmail.com",
+      "sdt": "0987654321",
+      "dia_tri": "Hoài đức, Hà Nội1",
+      "vai_tro": 0
+    },
+    {
+      "id": "9efc",
+      "username": "thuy",
+      "password": "123",
+      "email": "",
+      "sdt": "",
+      "dia_tri": "",
+      "vai_tro": 0
+    }
+  ],
+  "login": {
+    "isLoggedIn": true,
+    "user": {
+      "id": "1",
+      "username": "huy",
+      "password": "123",
+      "img": "user1_Screenshot 2023-12-10 214558.png",
+      "email": "huy@gmail.com",
+      "sdt": "0377699408",
+      "dia_tri": "dong anh",
+      "vai_tro": 1
+    }
+  }
+}

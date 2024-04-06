@@ -1,0 +1,115 @@
+<form method="post" class="mt-5">
+  <div class="container" style="max-width: 90%; color: black">
+    <div class="row">
+      <div class="col-lg-5 col-md-5">
+        <legend>Thông tin đơn hành</legend>
+        <div class="form-group mb-3">
+          <label for="usr" class="form-label">Họ và tên:</label>
+          <input
+            required="true"
+            type="text"
+            class="form-control"
+            id="fullname"
+            name="fullname"
+            ng-model="donhang.hovaten"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="phone_number" class="form-label">Số điện thoại:</label>
+          <input
+            required="true"
+            type="tel"
+            class="form-control"
+            id="phone_number"
+            name="phonenumber"
+            ng-model="donhang.phone"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="address" class="form-label">Địa chỉ:</label>
+          <input
+            required="true"
+            type="text"
+            class="form-control"
+            id="address"
+            name="address"
+            ng-model="donhang.dia_tri"
+          />
+        </div>
+      </div>
+      <div class="col-md-7">
+        <legend>Đơn hàng của bạn</legend>
+        <table class="table" style="align-items: center">
+          <thead>
+            <tr>
+              <th>Ảnh</th>
+              <th>Tên sản phẩm</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Tổng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="dh in orders">
+              <td>
+                <img
+                  src="assets/img/uploads/sanpham/{{dh.anh}}"
+                  width="100px"
+                />
+              </td>
+              <td>{{dh.tensp}}</td>
+              <td>{{dh.gia}}₫</td>
+              <td>x{{dh.sl}}</td>
+              <td>{{dh.gia*dh.sl}}₫</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pttt mt-5 mb-5">
+          <legend>Phương thức thanh toán</legend>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inlineRadio1"
+              checked
+              value="2"
+              ng-model="donhang.ma_tt"
+            />
+            <label for="inlineRadio1">chuyển khoản</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inlineRadio1"
+              value="1"
+              ng-model="donhang.ma_tt"
+            />
+            <label for="inlineRadio1">Tiền mặt</label>
+          </div>
+        </div>
+        <div class="row" style="justify-content: right">
+          <div style="width: 50%">
+            <div class="total row">
+              <p class="col-6">Tổng cộng</p>
+              <p class="col-6" ng-model="total">{{total}}₫</p>
+            </div>
+            <div
+              class="btn btn-success"
+              name="muahang"
+              style="width: 100%"
+              ng-click="creatDH()"
+            >
+              Hoàn thành
+            </div>
+            <div ng-if="formValid" class="text-danger">
+              {{formValidMessage}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

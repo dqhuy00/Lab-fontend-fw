@@ -1,0 +1,266 @@
+<!--product details start-->
+<div class="product_details mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 me-4">
+        <div class="product-details-tab">
+          <div id="img-1" class="zoomWrapper single-zoom">
+            <a href="#">
+              <img
+                id="zoom1"
+                src="assets/img/uploads/sanpham/{{product.anhsp}}"
+                data-zoom-image="assets/img/product/product1.jpg>"
+                alt="big-1"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="product_d_right">
+          <form id="productForm" action="" method="post">
+            <h1>{{product.ten_sp}}</h1>
+            <div class="product_price mb-2">
+              <span class="current_price fw-medium" style="color: #242424"
+                >{{product.gia}}₫</span
+              >
+            </div>
+            <div class="product_desc mb-2 w-75">
+              <p>{{product.mota}}</p>
+            </div>
+
+            <div class="mb-2">
+              <label class="fw-bold me-2" style="font-size: 1rem"
+                >Số lượng:</label
+              >
+              <input
+                type="number"
+                min="1"
+                value="1"
+                style="width: 100px"
+                id="slSP"
+              />
+            </div>
+            <div class="row mt-4">
+              <div
+                class="btn btn-dark rounded-1 p-3 col-5 me-4"
+                name="addCart"
+                style="margin-left: 12px"
+                ng-click="addCart(product.id,product.gia,product.anhsp,product.ten_sp)"
+              >
+                Thêm vào giỏ hàng
+              </div>
+
+              <div
+                class="btn btn-danger rounded-1 p-3 col-5"
+                ng-click="muaNgay(product.id,product.gia,product.anhsp,product.ten_sp)"
+              >
+                Mua ngay
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--product details end-->
+
+<!--product info start-->
+<div class="container">
+  <div class="product_d_inner mt-5">
+    <div class="product_info_button">
+      <ul class="nav" role="tablist">
+        <li id="review_form">
+          <a>Reviews</a>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content border">
+      <div class="tab-pane fade show active" id="info" role="tabpanel">
+        <div class="product_info_content">
+          <p>{{product.mota}}</p>
+        </div>
+      </div>
+
+      <div class="product_info_inner" ng-repeat="bl in binhluans">
+        <div class="product_ratting mb-10 d-flex gap-2">
+          <ul class="d-flex">
+            <li>
+              <a href="#"
+                ><i
+                  class="fa fa-star {{bl.rate<1 ? 'star_gray' : 'star_oran'}}"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fa fa-star {{bl.rate<2 ? 'star_gray' : 'star_oran'}}"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fa fa-star {{bl.rate<3 ? 'star_gray' : 'star_oran'}}"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fa fa-star {{bl.rate<4 ? 'star_gray' : 'star_oran'}}"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fa fa-star {{bl.rate<5 ? 'star_gray' : 'star_oran'}}"
+                ></i
+              ></a>
+            </li>
+          </ul>
+          <p>{{bl.ngay_bl}}</p>
+        </div>
+        <div class="product_demo d-flex gap-2">
+          <strong>{{bl.username}}</strong>
+          <p>{{bl.noi_dung}}</p>
+        </div>
+      </div>
+      <div class="product_review_form mt-3">
+        <form method="post">
+          <h2 class="fw-medium" style="font-size: 1.2rem; color: #242424">
+            Bình luận
+          </h2>
+          <div class="row">
+            <div class="col-12">
+              <div style="display: flex; align-items: self-start; gap: 5px">
+                <label for="review_comment"
+                  >Đánh giá của bạn về sản phẩm
+                </label>
+                <div class="rating">
+                  <input
+                    type="radio"
+                    id="star1"
+                    name="rating"
+                    value="1"
+                    hidden
+                  />
+                  <i id="star1" class="rating__star fa fa-star"></i>
+                  <input
+                    type="radio"
+                    id="star2"
+                    name="rating"
+                    value="1"
+                    hidden
+                  />
+                  <i id="star2" class="rating__star fa fa-star"></i>
+                  <input
+                    type="radio"
+                    id="star3"
+                    name="rating"
+                    value="1"
+                    hidden
+                  />
+                  <i id="star3" class="rating__star fa fa-star"></i>
+                  <input
+                    type="radio"
+                    id="star4"
+                    name="rating"
+                    value="1"
+                    hidden
+                  />
+                  <i id="star4" class="rating__star fa fa-star"></i>
+                  <input
+                    type="radio"
+                    id="star5"
+                    name="rating"
+                    value="1"
+                    hidden
+                  />
+                  <i id="star5" class="rating__star fa fa-star"></i>
+                </div>
+              </div>
+
+              <input
+                type="number"
+                name="rating"
+                id="rating-input"
+                value="5"
+                hidden
+                ng-model="myBL.rate"
+              />
+              <textarea
+                name="comment"
+                id="review_comment"
+                class="w-100"
+                rows="5"
+                ng-model="myBL.noi_dung"
+              ></textarea>
+            </div>
+          </div>
+          <button class="btn btn-dark" name="guiBL" ng-click="sendBL()">
+            Gửi
+          </button>
+          <div ng-if="formValid" class="text-danger">{{formValidMessage}}</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--product info end-->
+
+<!--product section area start-->
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="section_title">
+        <h2 style="font-size: 2rem">Sản phẩm cùng loại</h2>
+      </div>
+    </div>
+  </div>
+  <div class="product_area">
+    <div class="row row-cols-4">
+      <div class="col" ng-repeat="cl in cungloai | limitTo:4">
+        <div class="single_product">
+          <div class="product_thumb">
+            <a class="primary_img" href="#!chitietsp/{{cl.id}}"
+              ><img src="assets/img/uploads/sanpham/{{cl.anhsp}}" alt=""
+            /></a>
+            <div
+              class="product_action"
+              ng-click="addCart(sp.id,sp.gia,sp.anhsp,sp.ten_sp)"
+            >
+              <div class="hover_action">
+                <a href="#"><i class="fa-solid fa-plus"></i></a>
+                <div class="action_button">
+                  <ul>
+                    <li>
+                      <a title="add to cart"
+                        ><i class="fa-solid fa-cart-shopping"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="quick_button">
+              <a href="#!chitietsp/{{cl.id}}" title="quick_view"
+                >Xem sản phẩm</a
+              >
+            </div>
+          </div>
+          <div class="product_content">
+            <h3>
+              <a href="#!chitietsp/{{cl.id}}">{{cl.ten_sp}}</a>
+            </h3>
+            <span class="current_price">{{cl.gia}}₫</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--product section area end-->

@@ -1,0 +1,83 @@
+<div class="shopping_cart_area mt-5">
+  <div class="container">
+    <form action="#">
+      <div class="row">
+        <div class="col-12">
+          <div class="table_desc">
+            <div class="cart_page table-responsive">
+              <table class="table table-bordered mt-1 mb-5 w-100">
+                <thead>
+                  <tr>
+                    <th class="product_remove">Delete</th>
+                    <th class="product_thumb">Image</th>
+                    <th class="product_name">Product</th>
+                    <th class="product-price">Price</th>
+                    <th class="product_quantity">Quantity</th>
+                    <th class="product_total">Total</th>
+                  </tr>
+                </thead>
+                <tbody id="order">
+                  <tr ng-repeat="ca in carts">
+                    <td class="product_remove">
+                      <a ng-click="deleteSP(ca.id)"
+                        ><i class="fa-solid fa-trash"></i
+                      ></a>
+                    </td>
+                    <td class="product_thumb" style="width: 159px">
+                      <a href="#"
+                        ><img
+                          src="assets/img/uploads/sanpham/{{ca.anh}}"
+                          alt=""
+                      /></a>
+                    </td>
+                    <td style="color: #747474; font-weight: bold">
+                      <a href="#">{{ca.tensp}}</a>
+                    </td>
+                    <td class="product-price fw-bold m-5">{{ca.gia}}₫</td>
+                    <td class="product_quantity">
+                      <input
+                        min="1"
+                        value="{{ca.sl}}"
+                        type="number"
+                        ng-model="ca.sl"
+                        ng-change="changeQuantity(ca.id, ca.sl)"
+                      />
+                    </td>
+                    <td class="product_total fw-medium">{{ca.gia * ca.sl}}₫</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--coupon code area start-->
+      <div class="d-flex justify-content-end">
+        <div class="coupon_code right border" style="width: 40%">
+          <h3
+            class="p-2 bg-gray14 fw-bold"
+            style="color: #ffffff; font-size: 16px"
+          >
+            Tổng giỏ hàng
+          </h3>
+          <div class="coupon_inner p-3">
+            <div class="cart_subtotal d-flex justify-content-between">
+              <p style="font-size: 1.2rem">Tổng:</p>
+              <p
+                class="cart_amount fw-normal"
+                style="font-size: 1rem"
+                ng-model="total"
+              >
+                {{total}}₫
+              </p>
+            </div>
+            <div class="checkout_btn d-flex justify-content-end">
+              <a href="#!checkout" class="btn btn-dark" >Mua Hàng</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

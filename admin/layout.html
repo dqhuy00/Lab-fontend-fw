@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap.css" />
+    <script src="../lib/bootstrap.js"></script>
+    <script src="../lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="../lib/angular.js"></script>
+    <script src="../lib/angular-route.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+  <body ng-app="myAdmin" ng-controller="adminCtrl">
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar" class="active">
+        <div class="sidebar-header" id="sidebar-title">
+          <h3><i class="fa-regular fa-circle-user"></i> Admin</h3>
+          <strong><i class="fa-solid fa-bars"></i></strong>
+        </div>
+
+        <ul class="list-unstyled components">
+          <li class="">
+            <a href="#!list-sp">
+              <i class="fa-solid fa-box"></i>
+              Product
+            </a>
+          </li>
+          <li class="">
+            <a href="#!list-dm">
+              <i class="fa-solid fa-list"></i>
+              Catagory
+            </a>
+          </li>
+          <li class="">
+            <a href="#!list-dh">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Order
+            </a>
+          </li>
+          <li class="">
+            <a href="../index.html">
+              <i class="fa-solid fa-house"></i>
+              Website
+            </a>
+          </li>
+          <li class="">
+            <a href="#" ng-click="dangXuat()">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Logout
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content Holder -->
+
+      <div class="container-fluid" ng-view></div>
+    </div>
+    <script>
+      var admin = angular.module("myAdmin", ["ngRoute"]);
+      admin.config(function ($routeProvider) {
+        $routeProvider
+          .when("/list-sp", {
+            templateUrl: "sanpham.html",
+            controller: "spCtrl",
+          })
+          .when("/detail-sp/:id", {
+            templateUrl: "detailSP.html",
+            controller: "spDetailCtrl",
+          })
+          .when("/edit-sp/:id", {
+            templateUrl: "sua_sp.html",
+            controller: "spEditCtrl",
+          })
+          .when("/create-sp", {
+            templateUrl: "them_sp.html",
+            controller: "spCreateCtrl",
+          })
+          .when("/list-dm", {
+            templateUrl: "loai.html",
+            controller: "dmCtrl",
+          })
+          .when("/create-dm", {
+            templateUrl: "them_loai.html",
+            controller: "dmCreateCtrl",
+          })
+          .when("/edit-dm/:id", {
+            templateUrl: "sua_loai.html",
+            controller: "dmEditCtrl",
+          })
+          .when("/list-dh", {
+            templateUrl: "donhang.html",
+            controller: "dhCtrl",
+          })
+          .when("/edit-dh/:id", {
+            templateUrl: "sua_ttdh.html",
+            controller: "dhEditCtrl",
+          })
+          .when("/detail-dh/:id", {
+            templateUrl: "chitietdh.html",
+            controller: "dhDetailCtrl",
+          })
+          .otherwise({
+            redirectTo: "/list-sp",
+          });
+      });
+      admin.controller("adminCtrl", function ($scope, $http, $rootScope) {
+        $rootScope.danhmuc = "";
+        $rootScope.ttdh = "";
+
+        // Danh mục
+        $http({
+          method: "GET",
+          url: "http://localhost:3000/danhmuc",
+        }).then((res) => {
+          $rootScope.danhmuc = res.data;
+        });
+
+        // Trạng thái đơn hàng
+        $http({
+          method: "GET",
+          url: "http://localhost:3000/trangthaidh",
+        }).then((res) => {
+          $rootScope.ttdh = res.data;
+        });
+
+        $scope.dangXuat = function () {
+          $scope.login = {
+            isLoggedIn: false,
+            user: "",
+          };
+          $http({
+            method: "PUT",
+            url: "http://localhost:3000/login",
+            data: $scope.login,
+          }).then(() => {
+            window.location.href = "http://127.0.0.1:5501/index.html#!/home";
+          });
+        };
+      });
+    </script>
+    <script src="../assets/js/admin.js"></script>
+
+    <!-- Sản phẩm -->
+    <script src="controller/list_sp.js"></script>
+    <script src="controller/create_sp.js"></script>
+    <script src="controller/detail_sp.js"></script>
+    <script src="controller/edit_sp.js"></script>
+
+    <!-- Danh mục -->
+    <script src="controller/create_dm.js"></script>
+    <script src="controller/edit_dm.js"></script>
+    <script src="controller/list_dm.js"></script>
+
+    <!-- Đơn hàng -->
+    <script src="controller/detail_dh.js"></script>
+    <script src="controller/edit_dh.js"></script>
+    <script src="controller/list_dh.js"></script>
+  </body>
+</html>

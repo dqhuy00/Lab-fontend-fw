@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.css" />
+    <script src="lib/bootstrap.js"></script>
+    <script src="lib/font-fontawesome-ae333ffef2.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body ng-app="myApp" ng-controller="indexCtrl">
+    <!--header area start-->
+    <div class="container-fluid">
+      <div class="row align-items-center bg-gray14 p-1">
+        <div class="col-lg-7 col-md-12">
+          <div class="welcome_text">
+            <ul class="d-flex">
+              <li>
+                <span style="color: white">Giao hàng miễn phí:</span>
+                Tận dụng cơ hội để tiết kiệm thời gian của chúng tôi
+              </li>
+              <li class="text-light ms-3 me-3">|</li>
+              <li>
+                <span style="color: white">Trả hàng miễn phí *</span> Đảm bảo
+                hài lòng
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <div
+            class="top_right d-flex justify-content-end"
+            ng-if="login.isLoggedIn == false"
+          >
+            <a
+              class="dropdown-toggle text-light"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              href="#"
+              >Account
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#!login">Đăng nhập</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#!register">Đăng ký</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="top_right d-flex justify-content-end"
+            ng-if="login.isLoggedIn == true"
+          >
+            <a
+              class="dropdown-toggle text-light"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              href="#"
+              >Xin chào, {{login.user.username}}
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Hồ sơ</a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="http://127.0.0.1:5501/admin/layout.html#!/list-sp"
+                  ng-if="login.user.vai_tro == 1"
+                  >Quản trị</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" ng-click="dangXuat()">Đăng xuất</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center pb-4 mt-5 ms-4 me-4 border-bottom">
+        <div class="col-lg-4">
+          <div class="search_bar">
+            <form action="#" method="post">
+              <select
+                class="select_option ps-1"
+                name="select"
+                id="categori"
+                style="width: 20%"
+                ng-model="searchOption"
+              >
+                <option selected="selected" value="0">All</option>
+                <option ng-repeat="dm in danhmuc" value="{{dm.id}}">
+                  {{dm.ten_dm}}
+                </option>
+              </select>
+              <input
+                placeholder="Tìm kiếm"
+                type="text"
+                name="tensp"
+                ng-model="searchText"
+              />
+              <button type="submit" name="search" ng-click="searchSP()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-center">
+          <div class="logo">
+            <a href="#!home"><img src="assets/img/logo/logo.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-end">
+          <div class="cart_link" ng-if="login.isLoggedIn == true">
+            <a href="#!cart"
+              ><i class="fa-solid fa-cart-shopping pe-1"></i>{{cartNumber}}
+              item(s)</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center mt-3">
+        <div class="col-12">
+          <ul
+            class="d-flex justify-content-center fw-medium"
+            style="color: black; font-size: 0.9rem; gap: 1.6rem"
+          >
+            <li class="active"><a href="#!home">Home </a></li>
+            <li><a href="#!product">Shop </a></li>
+            <li ng-repeat="dm in danhmuc">
+              <a href="#!product?ma_dm={{dm.id}}">{{dm.ten_dm}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--header area end-->
+
+    <div ng-view></div>
+
+    <!--footer area start-->
+    <footer class="bg-gray14 mt-5">
+      <div
+        class="footer_top pt-5 pb-4"
+        style="border-bottom: 1px solid rgb(221, 221, 221)"
+      >
+        <div class="container">
+          <div class="row" style="justify-items: center">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+              <div class="widgets_container">
+                <h3>Tất cả sản phẩm</h3>
+                <div class="footer_menu">
+                  <ul>
+                    <li>
+                      <a href="index.php?act=product&iddm=1">Gọng Kính</a>
+                    </li>
+                    <li><a href="index.php?act=product&iddm=2">Kính Râm</a></li>
+                    <li>
+                      <a href="index.php?act=product&iddm=3">Kính Thời Trang</a>
+                    </li>
+                    <li><a href="#">Phụ Kiện</a></li>
+                    <!-- <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Returns</a></li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+              <div class="widgets_container">
+                <h3>Chính sách mua hàng</h3>
+                <div class="footer_menu">
+                  <ul>
+                    <li><a href="#">Hình thức thanh toán</a></li>
+                    <li><a href="#">Chính sách giao hàng</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Chính sách Bảo Mật</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="widgets_container contact_us">
+                <h3>Thông tin liên hệ</h3>
+                <div class="footer_contact">
+                  <p>
+                    Địa chỉ: Số 75A, Ngách 139/27 Nguyễn Ngọc Vũ, Tổ 30, P.
+                    Trung Hoà, Q. Cầu Giấy, Hà Nội
+                  </p>
+                  <p>
+                    Hotline:
+                    <a href="tel:%2019000359">(+084) 1900 0359</a>
+                  </p>
+                  <p>Email: vietntph33724@gamil.com</p>
+                  <ul class="d-flex gap-3 mt-2">
+                    <li>
+                      <a href="#" title="Twitter"
+                        ><i class="fa fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" title="google-plus"
+                        ><i class="fa fa-google-plus"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" title="facebook"
+                        ><i class="fa fa-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" title="youtube"
+                        ><i class="fa fa-youtube"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="widgets_container newsletter">
+                <h3>Về Shop</h3>
+                <div class="newleter-content">
+                  <p class="pb-1">Giới Thiệu</p>
+                  <p class="pb-1">Liên Hệ</p>
+                  <p class="pb-1">Hệ Thống Cửa Hàng</p>
+                  <img
+                    src="./assets/img/about/dmca_protected_sml_120n.png"
+                    alt=""
+                  />
+                  <div style="height: 60px" class="mt-2">
+                    <img
+                      src="./assets/img/about/logoSaleNoti.png"
+                      alt=""
+                      style="height: 60px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom pt-3 pb-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div class="copyright_area">
+                <p>
+                  &copy; 2021 <strong> </strong> Mede with ❤️ by
+                  <a href="https://hasthemes.com/" target="_blank"
+                    ><strong style="color: #ff6a28">HasThemes</strong></a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <ul class="d-flex gap-4 justify-content-end">
+                <li><a href="#">Order History</a></li>
+                <li><a href="#">Wish List</a></li>
+                <li><a href="#">Newsletter</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--footer area end-->
+    <script>
+      var app = angular.module("myApp", ["ngRoute"]);
+      app.config(function ($routeProvider) {
+        $routeProvider
+          .when("/home", {
+            templateUrl: "home.html",
+            controller: "homeCtrl",
+          })
+          .when("/login", {
+            templateUrl: "login.html",
+            controller: "loginCtrl",
+          })
+          .when("/register", {
+            templateUrl: "register.html",
+            controller: "regCtrl",
+          })
+          .when("/product", {
+            templateUrl: "product.html",
+            controller: "productCtrl",
+          })
+          .when("/cart", {
+            templateUrl: "cart.html",
+            controller: "cartCtrl",
+          })
+          .when("/checkout", {
+            templateUrl: "checkout.html",
+            controller: "checkoutCtrl",
+          })
+          .when("/chitietsp/:id", {
+            templateUrl: "chitietsp.html",
+            controller: "chitietspCtrl",
+          })
+          .otherwise({
+            redirectTo: "/home",
+          });
+      });
+      app.controller("indexCtrl", function ($scope, $http, $rootScope) {
+        $rootScope.login = "";
+        $rootScope.danhmuc = "";
+        $rootScope.cartNumber = 0;
+        $rootScope.orders = [];
+        $rootScope.searchOption = 0;
+        $rootScope.searchText = "";
+
+        // search
+        $rootScope.searchSP = function () {
+          window.location.href =
+            "http://127.0.0.1:5501/index.html#!/product?ma_dm=" +
+            $rootScope.searchOption +
+            "&keyword=" +
+            $rootScope.searchText;
+        };
+
+        // Danh mục
+        $http({
+          method: "GET",
+          url: "http://localhost:3000/danhmuc",
+        }).then((res) => {
+          $rootScope.danhmuc = res.data;
+        });
+
+        // Đăng nhập
+        $http({
+          method: "GET",
+          url: "http://localhost:3000/login",
+        }).then((res) => {
+          $rootScope.login = res.data;
+
+          // Cart
+          $http({
+            method: "GET",
+            url: "http://localhost:3000/giohang",
+            params: {
+              ma_user: $rootScope.login.user.id,
+            },
+          }).then((res) => {
+            $rootScope.cartNumber = res.data.length;
+            $rootScope.orders = res.data;
+          });
+        });
+
+        $scope.dangXuat = function () {
+          $scope.login = {
+            isLoggedIn: false,
+            user: "",
+          };
+          $http({
+            method: "PUT",
+            url: "http://localhost:3000/login",
+            data: $scope.login,
+          });
+        };
+      });
+    </script>
+
+    <script src="contrller/home.js"></script>
+    <script src="contrller/register.js"></script>
+    <script src="contrller/login.js"></script>
+    <script src="contrller/product.js"></script>
+    <script src="contrller/cart.js"></script>
+    <script src="contrller/checkout.js"></script>
+    <script src="contrller/chitietsp.js"></script>
+  </body>
+</html>
